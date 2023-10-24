@@ -1,0 +1,402 @@
+:root {
+    --bg-color: #000000;
+    --space-bg-col1: #3e2837;
+    --space-bg-col2: #986189;
+    --about-bg-col1: #71948d;
+    --about-bg-col2: #4c674f;
+    --missions-bg-col: #c28d3d;
+    --text-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: var(--missions-bg-col);
+    color: var(--text-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* body text and headings */
+h2 {
+    font-family: Kufam;
+    font-size: 3rem;
+    letter-spacing: .1vw;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h1 {
+    font-family: Kufam;
+    font-size: 7vw;
+}
+
+p {
+    font-family: Nunito;
+    font-size: 1.5rem;
+    letter-spacing: .05vw;
+}
+
+footer,
+.f-li {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 992px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    nav ul .nav-link {
+        font-size: 1.2rem;
+    }
+
+    footer,
+    .f-li {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    nav ul .nav-link {
+        font-size: .8rem;
+    }
+
+    footer,
+    .f-li {
+        font-size: 1rem;
+    }
+}
+
+/* logo */
+nav .logo a {
+    font-family: Mouse Memoirs;
+    font-size: 5vw;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* nav */
+nav .nav-link {
+    text-decoration: none;
+    font-family: Nunito;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    align-items: center;
+    padding: 1vh 1vw;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2vw;
+    margin-right: 1vw;
+}
+
+/* hero */
+.hero {
+    position: relative;
+    padding: 10vh 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+.hero video {
+    max-height: 90%;
+    max-width: 90vw;
+    object-fit: cover;
+}
+
+.hero_text,
+.hero_img {
+    position: absolute;
+    text-align: center;
+}
+
+.hero_text {
+    top: 5vw;
+}
+
+.hero_img img {
+    max-height: 100%;
+    max-width: 70%;
+    object-fit: contain;
+}
+
+.hero_img {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* space odyssey section */
+.space {
+    position: relative;
+    background-color: var(--space-bg-col1);
+    margin-top: 5vh;
+    height: 100vh;
+    width: 90vw;
+    margin-right: 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.space_img-bg {
+    background-color: var(--space-bg-col2);
+    max-height: 80vh;
+    max-width: 30vw;
+    padding-bottom: 4vh;
+    position: absolute;
+    right: -10vh;
+    bottom: 10vh;
+}
+
+.space_img {
+    width: 100%;
+    margin-top: -9vh;
+    margin-left: -3vw;
+}
+
+.space_text {
+    padding-top: 20vh;
+    padding-left: 5vw;
+}
+
+.space_text p {
+    padding-top: 2vh;
+    padding-left: 2vw;
+}
+
+.space_achieve {
+    display: flex;
+    gap: 2vw;
+    padding-top: 10vh;
+    padding-left: 5vw;
+}
+
+/* about section */
+.about {
+    max-width: 100%;
+    object-fit: cover;
+    position: relative;
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+
+.about_text {
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+}
+
+.about_bg {
+    padding: 2vh;
+    width: 50vw;
+    height: 50vh;
+}
+
+.about_p_bg {
+    padding: 1vh;
+    margin-left: 3vw;
+    width: 50vw;
+    position: absolute;
+    top: 10vh;
+}
+
+.about_bg {
+    background-color: var(--about-bg-col1);
+}
+
+.about_p_bg {
+    background-color: var(--about-bg-col2);
+}
+
+.p2 {
+    padding-top: 1vh;
+}
+
+/* missions section */
+.missions {
+    width: 100%;
+    background: var(--missions-bg-col);
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+}
+
+.mission_h {
+    margin-left: 10vw;
+    padding-bottom: 3vh;
+}
+
+.mission_img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10vw;
+}
+
+.mission_img img {
+    width: 20vw;
+}
+
+/* footer section */
+footer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+    padding-bottom: 2vw;
+}
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    gap: 20vw;
+}
+
+.f-li {
+    list-style: none;
+    font-family: Nunito;
+    letter-spacing: .1vh;
+}
+
+footer ul li {
+    margin-bottom: 2vw;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.hidden-hero-text {
+    opacity: 0;
+    /* filter: blur(5px); */
+    /* -webkit-text-fill-color: transparent; */
+    /* -webkit-text-stroke: 1px white; */
+    transform: translateY(30vh);
+    transition: 1s ease-in;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for small screens */
+@media screen and (max-width: 550px) {
+    .space {
+        max-height: 75vh;
+        margin-right: 0;
+    }
+
+    .space_img-bg {
+        background-color: transparent;
+        right: 30vw;
+        max-height: 60vh;
+        padding-bottom: 0vh;
+        top: 67vh;
+    }
+
+    .space_img {
+        width: 100%;
+    }
+
+    .space_text {
+        padding-top: 10vh;
+    }
+
+    .about {
+        max-height: 90vh;
+    }
+
+    .about_bg {
+        width: 70vw;
+        height: 50vh;
+    }
+
+    .about_p_bg {
+        width: 70vw;
+    }
+
+    .space_achieve {
+        padding-top: 5vh;
+
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .space_img-bg {
+        background-color: transparent;
+        bottom: 5vh;
+    }
+}
