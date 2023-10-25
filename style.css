@@ -118,8 +118,24 @@ nav .nav-link {
     font-family: Nunito;
     color: var(--text-color);
     font-size: 1.5rem;
+    position: relative;
 }
 
+nav .nav-link::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text-color);
+    transition: width 0.3s;
+}
+
+nav .nav-link:hover::after {
+    width: 70%;
+}
 
 nav {
     display: flex;
@@ -155,13 +171,34 @@ nav ul {
 }
 
 .hero_text,
-.hero_img {
+.hero_img,
+.hero_btn {
     position: absolute;
     text-align: center;
 }
 
 .hero_text {
     top: 5vw;
+}
+
+.hero_btn {
+    bottom: -2vh;
+    width: 220px;
+    height: 60px;
+    position: relative;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    background-color: transparent;
+    border: 2px solid black;
+    font-family: Nunito;
+    font-size: 2rem;
+    letter-spacing: .2vw;
+    color: black;
+    overflow: hidden;
+}
+
+.hero_btn:hover {
+    transform: translateY(-8px);
 }
 
 .hero_img img {
@@ -312,6 +349,12 @@ footer ul li {
     margin-bottom: 2vw;
 }
 
+/* transition */
+
+.no-webkit-fill {
+    -webkit-text-fill-color: #fff !important;
+}
+
 .hidden {
     opacity: 0;
     filter: blur(5px);
@@ -319,19 +362,32 @@ footer ul li {
     transition: all 1s;
 }
 
+.hiddenimg {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all .5s;
+}
+
 .hidden-hero-text {
     opacity: 0;
-    /* filter: blur(5px); */
-    /* -webkit-text-fill-color: transparent; */
-    /* -webkit-text-stroke: 1px white; */
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.1px white;
     transform: translateY(30vh);
-    transition: 1s ease-in;
+    transition: all 1.5s ease-in-out;
+}
+
+.hiddenhero {
+    opacity: 0;
+    transform: scale(.8);
+    transition: all 1.5s ease;
 }
 
 .show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+    transform: scale(1);
 }
 
 
@@ -353,6 +409,20 @@ footer ul li {
 
 
 /* for small screens */
+@media screen and (max-width: 990px) {
+    .space_img-bg {
+        background-color: transparent;
+        bottom: 5vh;
+    }
+
+    .hero_btn {
+        bottom: -6vh;
+        font-size: 1.3rem;
+        width: 160px;
+        height: 45px;
+    }
+}
+
 @media screen and (max-width: 550px) {
     .space {
         max-height: 75vh;
@@ -392,11 +462,21 @@ footer ul li {
         padding-top: 5vh;
 
     }
+
+    .hero_btn {
+        bottom: -6vh;
+        font-size: 1.3rem;
+        width: 120px;
+        height: 40px;
+    }
 }
 
-@media screen and (max-width: 990px) {
-    .space_img-bg {
-        background-color: transparent;
-        bottom: 5vh;
+@media screen and (max-width: 420px) {
+    .hero_btn {
+        bottom: -7vh;
+        font-size: 1rem;
+        width: 100px;
+        height: 30px;
+        border: 1px solid black;
     }
 }
