@@ -28,12 +28,20 @@
     </nav>
     <main>
         <section class="hero">
-            <video autoplay loop muted playsinline class="hero_video">
-                <source src="vid/by-Timo-Herbert-from-Pixabay.mp4" type="video/mp4">
+            <div class="star"><canvas id="c"></canvas></div>
+            <!-- <video autoplay loop muted playsinline class="hero_video"> -->
+            <source src="vid/by-Timo-Herbert-from-Pixabay.mp4" type="video/mp4">
             </video>
             <div class="hero_img"><img class="hiddenhero" src="img/pexels-Photo-by-Kristaps.webp"></div>
             <h1 class="hero_text hidden-hero-text">TOUCH NEW HORIZONS</h1>
-            <button class="hero_btn">Xplore</button>
+            <div class="hero_btn hidden-hero-btn">
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>Xplore</a>
+            </div>
+            <!-- <button class="hero_btn hidden-hero-btn">Xplore</button> -->
         </section>
         <section class="space hidden">
             <div class="space_text hidden">
@@ -95,6 +103,10 @@
                     class="hidden" src="img/black-hole-home.webp">
             </div>
         </section>
+        <audio id="spaceMusic">
+            <source src="music/after-dark-pandora-cody-chillwithme.mp3" type="audio/mp3">
+            <source src="music/KQEJO-emphasis.mp3" type="audio/mp3">
+        </audio>
     </main>
     <footer>
         <div>
@@ -118,6 +130,7 @@
             <br>Explore, Discover, and Cosmize.
         </p>
     </footer>
+    <div></div>
 </body>
 
 </html>
