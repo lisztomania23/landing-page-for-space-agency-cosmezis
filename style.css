@@ -618,11 +618,13 @@ nav.fixed {
 
 @media screen and (max-width: 420px) {
     .hero_btn {
-        bottom: -3.5vh;
-        font-size: 1rem;
-        width: 100px;
-        height: 30px;
+        bottom: -2vh;
+        font-size: .9rem;
+        width: 80px;
+        height: 25px;
         border: 1px solid black;
+        padding-top: 2px;
+        padding-bottom: 5px;
     }
 }
 
