@@ -168,7 +168,3 @@ audio.addEventListener('ended', function () {
     audio.src = "music/KQEJO-emphasis.mp3";
     audio.play();
 });
-
-
-
-
