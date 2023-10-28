@@ -733,10 +733,10 @@ nav.fixed {
     margin: auto;
     display: flex;
     flex-direction: column;
-/*     background: rgba(0, 0, 0, .5); */
-    background-image: url(https://i.ibb.co/jhmf3Bj/astro.webp);
+    background: rgba(0, 0, 0, .5);
+    background-image: url(img/astro.webp);
     background-size: cover;
-/*     background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
     border-radius: 10px;
