@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link rel="icon" type="image/webp" size="32x32" href="./img/cosmezis_logo.webp">
+    <link rel="icon" type="image/webp" size="32x32" href="./img/cosmezis_logo.webp" alt="cosmezis logo">
     <link
         href="https://fonts.googleapis.com/css2?family=Kufam&family=Mouse+Memoirs&family=Nunito:wght@200;300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
     <script defer src="app.js"></script>
     <title>cosmezis</title>
 </head>
@@ -23,19 +24,22 @@
         <ul>
             <li><a class="nav-link" href="#about_us">About Us</a></li>
             <li><a class="nav-link" href="#missions">Missions</a></li>
-            <li><a class="nav-link" href="">Xplore</a></li>
+            <li><a class="nav-link xplore" href="javascript:;">Xplore</a></li>
         </ul>
     </nav>
     <main>
+
         <section class="hero">
+
             <div class="star"><canvas id="c"></canvas></div>
             <!-- <video autoplay loop muted playsinline class="hero_video"> -->
             <source src="vid/by-Timo-Herbert-from-Pixabay.mp4" type="video/mp4">
             </video>
-            <div class="hero_img"><img class="hiddenhero" src="img/pexels-Photo-by-Kristaps.webp"></div>
+            <div class="hero_img"><img class="hiddenhero" src="img/pexels-Photo-by-Kristaps.webp"
+                    alt="ExoTerra drone for navigation and exploration"></div>
             <h1 class="hero_text hidden-hero-text">TOUCH NEW HORIZONS</h1>
             <div class="hero_btn hidden-hero-btn">
-                <a href="#">
+                <a href="javascript:;" class="btn">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -43,6 +47,7 @@
             </div>
             <!-- <button class="hero_btn hidden-hero-btn">Xplore</button> -->
         </section>
+
         <section class="space hidden">
             <div class="space_text hidden">
                 <h2 class="space_h">Space Odyssey</h2>
@@ -68,7 +73,8 @@
                 </div>
             </div>
             <div class="space_img-bg hidden">
-                <img src="img/dyson-sphere.webp" class="space_img hidden">
+                <img src="img/dyson-sphere.webp" class="space_img hidden"
+                    alt="Dyson's Veil: This ambitious engineering feat encapsulates an entire star, a colossal sphere encompassing its energy, marking humanity's audacious leap toward harnessing celestial power on an unprecedented scale.">
             </div>
         </section>
         <section class="about" id="about_us">
@@ -101,9 +107,9 @@
             <div class="mission_img">
                 <div class="mission-item">
                     <div class="img__box">
-                        <img class="hidden" src="img/space-colony.webp">
+                        <img class="hidden" src="img/space-colony.webp" alt="space colony on Seraphix Prime">
                     </div>
-                    <div class="content">
+                    <div class="img-content">
                         <p class="content__text">
                             A bustling space colony on Seraphix Prime in the Velorian Galaxy, highlighting our
                             unwavering commitment to cosmic...<em><b>Read more and other missions</b></em>
@@ -112,9 +118,10 @@
                 </div>
                 <div class="mission-item">
                     <div class="img__box">
-                        <img class="hidden" src="img/alien-planet.webp">
+                        <img class="hidden" src="img/alien-planet.webp"
+                            alt="Towering high flowers of Gardens of Lunaria">
                     </div>
-                    <div class="content">
+                    <div class="img-content">
                         <p class="content__text">
                             Gardens of Lunaria on the Moon of Andromeda's Verdant Star. Here, towering, alien blooms
                             paint...<em><b>Read more and other missions</b></em>
@@ -123,9 +130,10 @@
                 </div>
                 <div class="mission-item">
                     <div class="img__box">
-                        <img class="hidden" src="img/black-hole-home.webp">
+                        <img class="hidden" src="img/black-hole-home.webp"
+                            alt="An engineer floating near Nomad's Hope ark">
                     </div>
-                    <div class="content">
+                    <div class="img-content">
                         <p class="content__text">
                             Embark on a visual journey through "Nomad's Hope," an interstellar ark. This colossal
                             vessel...<em><b>Read more and other missions</b></em>
@@ -161,7 +169,32 @@
             <br>Explore, Discover, and Cosmize.
         </p>
     </footer>
-    <div></div>
+    <div class="modal-wrapper">
+        <div class="modal">
+            <div class="head">
+                <a class="btn-close" href="javascript:;"></a>
+            </div>
+            <div class="modal-content">
+                <div class="form-box">
+                    <form>
+                        <div class="form-detail">
+                            <input type="text" name="name" id="name" required="">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-detail">
+                            <input type="email" name="email" id="email" required="">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-detail">
+                            <input type="tel" name="phone" id="phone" required="">
+                            <label for="phone">Phone</label>
+                        </div>
+                        <button type="submit">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
