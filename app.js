@@ -168,3 +168,26 @@ audio.addEventListener('ended', function () {
     audio.src = "music/KQEJO-emphasis.mp3";
     audio.play();
 });
+
+
+
+// for modal
+
+$(document).ready(function () {
+    // Open the modal
+    $(".btn, .xplore").click(function () {
+        $(".modal-wrapper").addClass("open");
+    });
+
+    // Close the modal on clicking the close button
+    $(".btn-close").click(function () {
+        $(".modal-wrapper").removeClass("open");
+    });
+
+    // Close the modal when clicking outside of it
+    $(".modal-wrapper").click(function (event) {
+        if (event.target === this) {
+            $(this).removeClass("open");
+        }
+    });
+});
