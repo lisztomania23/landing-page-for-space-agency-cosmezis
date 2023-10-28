@@ -733,7 +733,7 @@ nav.fixed {
     margin: auto;
     display: flex;
     flex-direction: column;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .8);
     background-image: url(img/astro.webp);
     background-size: cover;
     background-repeat: no-repeat;
