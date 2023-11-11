@@ -641,9 +641,9 @@ nav .logo a{
     nav .logo{
         background-image: url(img/cosmezis_logo.webp);
         background-size:5vw;
-        background-position:180%;
+        background-position:-80%;
         background-repeat: no-repeat;
-        animation: animation 2s linear infinite alternate;
+        animation: animation 3s linear infinite;
         padding-inline: 1vw;
         border-radius: 2.5vw;
     }
@@ -655,7 +655,7 @@ nav .logo a{
     
     @keyframes animation{
         100%{
-            background-position:-80%;
+            background-position:180%;
         }
     }
     
