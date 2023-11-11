@@ -926,7 +926,7 @@ html {
     cursor: url("img/astronaut_cursor.png"), auto !important;
 }
 
-a, a:hover, a:focus, button, button:hover, button:focus {
+a, a:hover, a:focus, button, button:hover, button:focus, missions img {
     cursor: url("img/astronaut_cursor_hover.png"), auto !important;
 }
 
