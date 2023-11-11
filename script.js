@@ -28,22 +28,25 @@ hiddenElements.forEach((el) => observer.observe(el));
 // music controls
 const main = document.querySelector('main');
 let audio;
+let audioPlayed = false;
 
 main.addEventListener('click', function () {
-    if (!audio) {
+    if (!audioPlayed) {
+        if (!audio) {
+            audio = new Audio();
+            audio.id = 'spaceMusic';
+            main.appendChild(audio);
+        }
 
-        audio = new Audio();
-        audio.id = 'spaceMusic';
-        main.appendChild(audio);
-    }
-
-    audio.src = "music/after-dark-pandora-cody-chillwithme.mp3";
-    audio.play();
-
-    audio.addEventListener('ended', function () {
-        audio.src = "music/KQEJO-emphasis.mp3";
+        audio.src = "music/after-dark-pandora-cody-chillwithme.mp3";
         audio.play();
-    });
+        audioPlayed = true;
+
+        audio.addEventListener('ended', function () {
+            audio.src = "music/KQEJO-emphasis.mp3";
+            audio.play();
+        });
+    }
 });
 
 
