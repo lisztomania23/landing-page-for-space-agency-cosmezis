@@ -5,16 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="pjXiEN1phAVdFRW2uJDdjLIgKpPwZxwBn7nDnRjKZUk" />
+    <meta name="author" content="Rahul Raj (lisztomania23)">
 
+    <link rel="icon" type="image/webp" size="32x32" href="./img/cosmezis_logo.webp" alt="">
 
-    <link rel="icon" type="image/webp" size="32x32" href="./img/cosmezis_logo.webp" alt="cosmezis logo">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kufam&family=Mouse+Memoirs&family=Nunito:wght@200;300&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Kufam&family=Mouse+Memoirs&family=Nunito:wght@200;300&display=swap">
     <link rel="stylesheet" href="style.css">
 
-    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script defer src="app.js"></script>
+    <!-- <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="xo.js"></script>
+    <script defer src="script.js"></script>
     <title>cosmezis</title>
 </head>
 
@@ -33,10 +36,12 @@
 
         <section class="hero">
 
-            <div class="star"><canvas id="c"></canvas></div>
-            <!-- <video autoplay loop muted playsinline class="hero_video"> -->
+            <div class="star"><canvas id="space"></canvas></div>
+
+            <!-- <video autoplay loop muted playsinline class="hero_video">
             <source src="vid/by-Timo-Herbert-from-Pixabay.mp4" type="video/mp4">
-            </video>
+            </video> -->
+
             <div class="hero_img"><img class="hiddenhero" src="img/pexels-Photo-by-Kristaps.webp"
                     alt="ExoTerra drone for navigation and exploration"></div>
             <h1 class="hero_text hidden-hero-text">TOUCH NEW HORIZONS</h1>
@@ -80,9 +85,14 @@
             </div>
         </section>
         <section class="about" id="about_us">
-            <video autoplay loop muted playsinline class="about_video">
-                <source src="vid/by-9991096-from-Pixabay.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline class="about_video" loading="lazy">
+                <source src="vid/by-Chot-Studio-from-Vecteezy.mp4" type="video/mp4">
             </video>
+
+            <!-- <div class="matrix">
+                <matrix></matrix>
+            </div> -->
+
             <div class="about_text hidden">
                 <div class="about_bg hidden">
                     <h2>About Us</h2>
@@ -109,7 +119,8 @@
             <div class="mission_img">
                 <div class="mission-item">
                     <div class="img__box">
-                        <img class="hidden" src="img/space-colony.webp" alt="space colony on Seraphix Prime">
+                        <img class="hidden" src="img/space-colony.webp" alt="space colony on Seraphix Prime"
+                            loading="lazy">
                     </div>
                     <div class="img-content">
                         <p class="content__text">
@@ -121,7 +132,7 @@
                 <div class="mission-item">
                     <div class="img__box">
                         <img class="hidden" src="img/alien-planet.webp"
-                            alt="Towering high flowers of Gardens of Lunaria">
+                            alt="Towering high flowers of Gardens of Lunaria" loading="lazy">
                     </div>
                     <div class="img-content">
                         <p class="content__text">
@@ -133,7 +144,7 @@
                 <div class="mission-item">
                     <div class="img__box">
                         <img class="hidden" src="img/black-hole-home.webp"
-                            alt="An engineer floating near Nomad's Hope ark">
+                            alt="An engineer floating near Nomad's Hope ark" loading="lazy">
                     </div>
                     <div class="img-content">
                         <p class="content__text">
@@ -197,6 +208,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
