@@ -1,24 +1,24 @@
 // Particle Animation
 
-var PARTICLE_NUM = 500;
-var PARTICLE_BASE_RADIUS = 0.5;
-var FL = 500;
-var DEFAULT_SPEED = 2;
-var BOOST_SPEED = 300;
+const PARTICLE_NUM = 500;
+const PARTICLE_BASE_RADIUS = 0.5;
+const FL = 500;
+const DEFAULT_SPEED = 2;
+const BOOST_SPEED = 300;
 
-var canvas;
-var canvasWidth, canvasHeight;
-var context;
-var centerX, centerY;
-var mouseX, mouseY;
-var speed = DEFAULT_SPEED;
-var targetSpeed = DEFAULT_SPEED;
-var particles = [];
+let canvas;
+let canvasWidth, canvasHeight;
+let context;
+let centerX, centerY;
+let mouseX, mouseY;
+let speed = DEFAULT_SPEED;
+let targetSpeed = DEFAULT_SPEED;
+let particles = [];
 
 window.addEventListener('load', function () {
     canvas = document.getElementById('space');
 
-    var resize = function () {
+    const resize = function () {
         canvasWidth = canvas.width = window.innerWidth;
         canvasHeight = canvas.height = window.innerHeight;
         centerX = canvasWidth * 0.5;
@@ -33,7 +33,7 @@ window.addEventListener('load', function () {
     mouseX = centerX;
     mouseY = centerY;
 
-    for (var i = 0, p; i < PARTICLE_NUM; i++) {
+    for (let i = 0; i < PARTICLE_NUM; i++) {
         particles[i] = randomizeParticle(new Particle());
         particles[i].z -= 500 * Math.random();
     }
@@ -62,20 +62,20 @@ function loop() {
 
     speed += (targetSpeed - speed) * 0.01;
 
-    var p;
-    var cx, cy;
-    var rx, ry;
-    var f, x, y, r;
-    var pf, px, py, pr;
-    var a, a1, a2;
+    let p;
+    let cx, cy;
+    let rx, ry;
+    let f, x, y, r;
+    let pf, px, py, pr;
+    let a, a1, a2;
 
-    var halfPi = Math.PI * 0.5;
-    var atan2 = Math.atan2;
-    var cos = Math.cos;
-    var sin = Math.sin;
+    let halfPi = Math.PI * 0.5;
+    let atan2 = Math.atan2;
+    let cos = Math.cos;
+    let sin = Math.sin;
 
     context.beginPath();
-    for (var i = 0; i < PARTICLE_NUM; i++) {
+    for (let i = 0; i < PARTICLE_NUM; i++) {
         p = particles[i];
 
         p.pastZ = p.z;
