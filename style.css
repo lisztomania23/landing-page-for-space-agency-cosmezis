@@ -70,6 +70,7 @@ p {
     font-size: 1.1rem;
     letter-spacing: .01vw;
     color: var(--text-color-p);
+    padding: 0.3vw;
 }
 
 footer,
@@ -317,6 +318,7 @@ nav ul {
     padding: 2vh;
     width: 50vw;
     height: 50vh;
+    background-color: var(--about-bg-col1);
 }
 
 .about_p_bg {
@@ -325,13 +327,6 @@ nav ul {
     width: 50vw;
     position: absolute;
     top: 10vh;
-}
-
-.about_bg {
-    background-color: var(--about-bg-col1);
-}
-
-.about_p_bg {
     background-color: var(--about-bg-col2);
 }
 
@@ -447,14 +442,13 @@ nav.fixed {
     right: 0;
     background-color: var(--bg-color);
     z-index: 1;
-    transition: 0.5sec;
+    transition: 0.5s;
 }
 
 
 
 /* hero button */
 .hero_btn {
-    /* bottom: 15vh; */
     width: 220px;
     height: 60px;
     position: relative;
@@ -571,7 +565,6 @@ nav.fixed {
 .mission-item {
     position: relative;
     overflow: hidden;
-    overflow: hidden;
 }
 
 .img__box img {
@@ -597,11 +590,6 @@ nav.fixed {
     transition: 0.5s;
     transform: translateX(-100%);
     overflow: hidden;
-}
-
-.content__text {
-    padding: 0.3vw;
-
 }
 
 .mission-item:hover .img-content {
@@ -788,7 +776,6 @@ nav .logo a{
     bottom: 0;
     margin-inline: auto;
     margin: auto;
-    display: flex;
     flex-direction: column;
     background: rgba(0, 0, 0, .8);
     background-image: url(img/astro.webp);
@@ -892,7 +879,6 @@ nav .logo a{
     width: 200px;
     font-size: 1rem;
     letter-spacing: .05vw;
-    /* color: #fff; */
     background: rgba(255, 255, 255, .2);
     border: 2px solid #000;
     cursor: pointer;
